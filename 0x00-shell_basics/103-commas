@@ -1,0 +1,2 @@
+#!/bin/bash
+ls -adF [!.]* [0-9]* [A-Z]* [a-z]* | tr '\n' ','; echo
