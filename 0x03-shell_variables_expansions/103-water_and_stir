@@ -1,2 +1,2 @@
 #!/bin/bash
-printf "%x\n" $((16#WATER + 16#STIR))
+echo "bc <<< obase=16 $WATER + $STIR"
