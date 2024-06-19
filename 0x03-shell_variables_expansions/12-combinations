@@ -1,2 +1,2 @@
 #!/bin/bash
-for a in {a..z} do for b in {a..z} do echo $a$b|grep -v oo|sort -k1|echo
+for a in {a..z} do for b in {a..z} do grep -v oo <<< $a$b|sort -k1|echo
