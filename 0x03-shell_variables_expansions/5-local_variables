@@ -1,2 +1,2 @@
 #!/bin/bash
-( set -o posix ; set )
+set | grep -v '^#' | grep -v '^declare -f' | tr '\0' ' ' | echo | printenv | tr '\0' ' ' | echo | declare -f | grep -v '^#' | grep -v '^declare -f' | tr '\0' ' ' | echo
