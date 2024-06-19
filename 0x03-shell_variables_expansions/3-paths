@@ -1,6 +1,2 @@
 #!/bin/bash
-count=0
-for dir in $PATH; do
-  ((count++))
-done
-echo "Number of directories in PATH: $count"
+echo "Number of directories in PATH: $(echo $PATH | tr ':' '\n' | wc -l)"
