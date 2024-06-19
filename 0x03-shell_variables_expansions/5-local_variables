@@ -1,2 +1,2 @@
 #!/bin/bash
-set; printenv; declare -f | grep -v '^#' | grep -v '^declare -f'
+set | grep -v '^#' | grep -v '^declare -f' | tr '\n' '\0' | xargs -0 echo | printenv | tr '\n' '\0' | xargs -0 echo | declare -f | grep -v '^#' | grep -v '^declare -f' | tr '\n' '\0' | xargs -0 echo
